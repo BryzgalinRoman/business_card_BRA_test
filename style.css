@@ -30,6 +30,7 @@ serif; */
     max-width: 1265px;
     margin: 0 auto;
     background-color: #ff0000;
+
     border-radius: 30px;
 }
 
@@ -88,14 +89,14 @@ serif; */
     box-shadow: 0px 5px 15px 0px rgba(0, 93, 254, 0.2);
 }
 
-.header__btn{
+.header__btn {
     background-color: rgb(196, 174, 30);
-    
+
 }
 
 .header__btn:hover {
     opacity: 0.9;
-   
+
 
 }
 
@@ -103,13 +104,13 @@ serif; */
 
 .hero {
     width: 100vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.15)),
-    url("images/81e07cd1623d223c425b85a0e18353b6.jpg") center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
+        url("images/81e07cd1623d223c425b85a0e18353b6.jpg") center/cover;
 }
 
-.main__container{
+.main__container {
     max-width: 1171px;
-    height: 1000px;
+    height: auto;
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 15px;
@@ -119,21 +120,96 @@ serif; */
     margin: 0 auto;
 }
 
-.hero__title{
+.hero__title {
     text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Yeseva One', cursive;
 }
+
+.hero__photo_block {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.hero__main_photo {
+    max-width: 350px;
+
+}
+
+.hero__main_photo img {
+    width: 100%;
+    border-radius: 20%;
+    border: 4px solid rgb(161, 41, 41);
+    filter: brightness(90%);
+}
+
+.hero__description_block {
+    max-width: 385px;
+}
+
+.hero__description_block_title {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.hero__description_block_container{
+    margin-bottom: 25px;
+}
+
+.description__second_title {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+}
+
+.description_text{
+    font-size: 17px;
+}
+
+.description_text::before{
+    content: "\1F48B";
+}
+
+.justify {
+    text-align: justify;
+}
+
+
 
 @media screen and (max-width: 1100px) {
 
-    .header__nav
-    {
+    .header__nav {
         display: none;
     }
 
-       }
+}
 
-    @media screen and (max-width: 430px) {
-        .header__phone{
-            display: none;
-        }
+@media screen and (max-width: 430px) {
+    .header__phone {
+        display: none;
     }
+
+    .hero__photo_block,
+    .hero__main_photo,
+    .hero__main_photo img {
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    .hero__main_photo{
+        /* max-width: 90vw; */
+    }
+
+    .hero__description_block {}
+}
