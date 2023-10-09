@@ -39,22 +39,29 @@ serif; */
     border-radius: 100%;
 }
 
+.header__logo img:hover {
+    transform: scale(1.5);
+}
+
 .header__nav,
 .header__nav a {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+    transition: 0.3s;
 }
 
 .header__nav {
     display: flex;
     gap: 35px;
+    
 }
 
 .header__nav a:hover {
-    color: rgb(161, 41, 41);
+    color: rgb(43, 35, 35);
     text-decoration: underline;
     transition: all 0.5s ease;
+    transform: scale(1.4);
 }
 
 /* .header__nav a:visited{
@@ -71,6 +78,12 @@ serif; */
     line-height: normal;
     letter-spacing: 2px;
     text-decoration: underline;
+}
+
+.header__phone a:hover {
+    color: rgb(43, 35, 35);
+    transition: all 0.5s ease;
+    /* transform: scale(1.5); */
 }
 
 #button {
@@ -96,6 +109,7 @@ serif; */
 
 .header__btn:hover {
     opacity: 0.9;
+    /* transform: scale(1.2); */
 
 
 }
@@ -123,9 +137,11 @@ serif; */
 .hero__title {
     text-transform: uppercase;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 900;
     font-family: 'Yeseva One', cursive;
+    /* position: relative; */
+    margin: 0px;
 }
 
 .hero__photo_block {
@@ -135,6 +151,7 @@ serif; */
     flex-direction: row;
     /* align-items: center; */
     justify-content: space-around;
+    margin-top: 50px;
 }
 
 .hero__main_photo {
@@ -142,11 +159,18 @@ serif; */
 
 }
 
+/* photo transform */
+
 .hero__main_photo img {
     width: 100%;
     border-radius: 20%;
     border: 4px solid rgb(161, 41, 41);
     filter: brightness(90%);
+    transition: 1s;
+}
+
+.hero__main_photo img:hover {
+    transform: scale(1.2);
 }
 
 .hero__description_block {
@@ -159,9 +183,10 @@ serif; */
     font-family: 'Yeseva One', cursive;
     font-size: 30px;
     margin-bottom: 25px;
+    text-decoration: underline;
 }
 
-.hero__description_block_container{
+.hero__description_block_container {
     margin-bottom: 25px;
 }
 
@@ -172,11 +197,11 @@ serif; */
     font-size: 20px;
 }
 
-.description_text{
+.description_text {
     font-size: 17px;
 }
 
-.description_text::before{
+.description_text::before {
     content: "\1F48B";
 }
 
@@ -207,7 +232,7 @@ serif; */
         max-width: 350px;
     }
 
-    .hero__main_photo{
+    .hero__main_photo {
         /* max-width: 90vw; */
     }
 
